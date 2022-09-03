@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity"
+    android:background="#F1F5F9">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/app_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/black">
+
+        <ImageButton
+            android:id="@+id/backChatting"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:background="@drawable/background_default"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/MatchingUser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_default"
+            android:gravity="center|fill"
+            android:paddingStart="110dp"
+            android:text="또래 상담사"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/chat_ban"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:background="@drawable/ban"
+            android:backgroundTint="@color/gray"
+            android:layout_marginEnd="16dp"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_actionbar"
+        android:id="@+id/top_bar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/borderline"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="아름다운 채팅 문화를 위해 비속어 사용시 채팅에 제한이 있을 수 있습니다."
+            android:textColor="#303839"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_messages_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/send_relative_layout"
+        android:layout_below="@id/top_bar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/send_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white"
+        android:padding="5dp">
+
+
+        <EditText
+            android:id="@+id/et_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@+id/iv_send_button"
+            android:background="@drawable/send_message_et_background"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:hint="메세지를 입력하세요"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:textColorHint="#AAA1A1"
+            android:textCursorDrawable="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_send_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="2dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_send_black_24dp"
+            app:tint="#00BCD4" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

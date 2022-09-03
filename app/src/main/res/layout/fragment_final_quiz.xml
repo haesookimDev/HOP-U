@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/sky_background">
+
+
+    <!--난이도-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="난이도 ★☆☆"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:gravity="center_horizontal|center_vertical"
+        android:textStyle="bold"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        android:background="@drawable/square_white_background"/>
+    <!--약간 띄우기-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_default"/>
+    <!--푸코 이미지-->
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:background="@drawable/puco_quiz_image"/>
+    <!--약간 띄우기-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_default"/>
+    <!--퀴즈 문제 ox칸-->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:elevation="16dp"
+        android:background="@drawable/square_round_background">
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="사이버 폭력 퀴즈 참여 완료"
+            android:textSize="13dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:background="@drawable/background_default"/>
+
+        <TextView
+            android:id="@+id/pointAcc"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/background_default"
+            android:gravity="center"
+            android:text="5 Point 적립"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+        <Button
+            android:id="@+id/btn_next_frag"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:text="나가기"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:background="@drawable/square_blue_round_background"/>
+
+    </LinearLayout>
+</LinearLayout>

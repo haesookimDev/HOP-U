@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--카드뉴스 이름과 더보기버튼-->
+    <TextView
+        android:id="@+id/cardnews_title"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <!--뷰 페이지 배너-->
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/cardnews_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scaleType="fitXY" />
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/cardnews_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+    <!--약간 띄우기-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:orientation="vertical"
+        android:background="@color/sky"/>
+
+</LinearLayout>

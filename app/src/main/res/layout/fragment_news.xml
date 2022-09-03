@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewsFragment">
+    <!--액션바 커스터마이징-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/app_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/black"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/arrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:background="@drawable/background_default"
+            android:src="@drawable/arrow"/>
+
+        <TextView
+            android:id="@+id/tempTrial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_default"
+            android:textColor="@color/black"
+            android:gravity="center|fill"
+            android:paddingStart="150dp"
+            android:text="소식"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/sky_background">
+            <!--카드뉴스 이름과 더보기버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/square_white_background">
+                <TextView
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="카드뉴스"
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <Button
+                    android:id="@+id/cardnews_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:textSize="13dp"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_default"/>
+            </LinearLayout>
+            <!--뷰 페이지 배너-->
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/news_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:scaleType="fitXY" />
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/news_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="bottom"/>
+            </FrameLayout>
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="vertical"
+                android:background="@drawable/square_white_background"/>
+            <!--누군가의 이야기 이름과 더보기버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/square_white_background">
+                <TextView
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="누군가의 이야기"
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <Button
+                    android:id="@+id/whostalk_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="더보기"
+                    android:textSize="13dp"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_default"/>                >
+            </LinearLayout>
+            <!--누군가의 이야기 리사이클러뷰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/whostalk_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

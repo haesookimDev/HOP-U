@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trialSpinner">
+        <item>찬성</item>
+        <item>반대</item>
+    </string-array>
+    <string-array name="trialSpinner_color" >
+        <item ><font color="#2D5BEF"><b>찬성</b></font></item>
+        <item ><font color="#FF5D49"><b>반대</b></font></item>
+    </string-array>
+    <string-array name="job">
+        <item>학생</item>
+        <item>또래 상담사</item>
+        <item>전문가</item>
+    </string-array>
+    <string-array name="mbti">
+        <item>ISTJ</item>
+        <item>ISTP</item>
+        <item>ISFJ</item>
+        <item>ISFP</item>
+        <item>INFJ</item>
+        <item>INFP</item>
+        <item>INTJ</item>
+        <item>INTP</item>
+        <item>ESTJ</item>
+        <item>ESTP</item>
+        <item>ESFJ</item>
+        <item>ESFP</item>
+        <item>ESTJ</item>
+        <item>ESTP</item>
+        <item>ENFJ</item>
+        <item>ENTP</item>
+    </string-array>
+</resources>

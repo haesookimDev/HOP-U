@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    >
+    <!--액션바 커스터마이징-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/app_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/black"
+        android:elevation="4dp"
+        android:padding="5dp"
+        android:backgroundTint="@color/white">
+        <!--홈 브랜드-->
+        <ImageView
+            android:id="@+id/main_brand"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/brand"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!--메인 화면 스크롤-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!--뷰 페이지 배너-->
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="50dp">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_gravity="center"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="10dp"/>
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="bottom"/>
+            </FrameLayout>
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/square_white_background"/>
+            <!--캐릭터 성장-->
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:background="@drawable/square_round_background"
+                android:elevation="8dp"
+                android:padding="15dp">
+                <!--캐릭터 이미지-->
+                <ImageView
+                    android:id="@+id/character_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/character_round"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/character"/>
+                <!--캐릭터 레벨&남은 경험치-->
+                <LinearLayout
+                    android:id="@+id/character_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center|start"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+                    <!--1.레벨-->
+                    <TextView
+                        android:id="@+id/character_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1단계"
+                        android:textColor="#248DFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <!--2.다음 레벨까지 남은 경험치-->
+                    <TextView
+                        android:id="@+id/next_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="다음 단계까지 3point 남았어요! "
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/square_white_background"/>
+            <!--응원 한마디-->
+            <LinearLayout
+                android:id="@+id/cheering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <!--1.기능 이름-->
+                <TextView
+                    android:id="@+id/cheering_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="응원 한마디"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <!--약간 띄우기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/square_white_background"/>
+                <!--2.에딧 텍스트-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/square_gray_round_background">
+
+                    <EditText
+                        android:id="@+id/edit_cheering"
+                        android:layout_width="380dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="20자 이내의 한마디를 적어주세요."
+                        android:maxLength="21"
+                        android:padding="13dp"
+                        android:singleLine="true" />
+                    <Button
+                        android:id="@+id/edit_cheering_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-1dp"
+                        android:text="확인"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/round_on_one_side_gray"
+                        android:padding="5dp"/>
+                </LinearLayout>
+                <!--3.작성된 글들 보기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cheeringRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/cheeringMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center"
+                        android:text="+ 더보기"
+                        android:textColor="@color/blue"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--최근 소식-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <!--1.기능 이름-->
+                <TextView
+                    android:id="@+id/new_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최근 소식"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <!--약간 띄우기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/background_default"/>
+                <!--2.카드뉴스 가로 리사이클러뷰-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--신고 플로팅 버튼 백그라운드틴트:배경색 / src:아이콘-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/callicon"
+        app:backgroundTint="@color/callred"
+        app:elevation="6dp"
+        app:fabCustomSize="50dp"
+        app:fabSize="normal"
+        app:maxImageSize="25dp" />
+
+</FrameLayout >

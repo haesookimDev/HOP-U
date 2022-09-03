@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky_background"
+    android:orientation="vertical"
+    tools:context=".ExperienceFragment">
+
+    <!--액션바 커스터마이징-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/app_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/black">
+
+        <ImageButton
+            android:id="@+id/arrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:background="@drawable/background_default"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/tempTrial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_default"
+            android:gravity="center|fill"
+            android:paddingStart="150dp"
+            android:text="체험"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sky_background"
+            android:orientation="vertical">
+
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/square_white_background"
+                android:orientation="vertical" />
+
+            <!--모의재판 이름과 버튼들-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_white_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="모의재판"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="현재 진행 중인 모의재판에 참여해 보세요!"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/addTrialButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/add_trial_icon" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="1000dp"
+                        android:layout_height="310dp">
+                        <!--현재 진행중인 재판-->
+                        <LinearLayout
+                            android:id="@+id/trial_in_progress"
+                            android:layout_width="200dp"
+                            android:layout_height="300dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/square_round_background"
+                            android:elevation="5dp"
+                            android:orientation="vertical">
+                            <!--이미지-->
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:background="@drawable/trial_image1" />
+                            <!--타이틀과 화살표-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/progressTrialTitle"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="진행중인
+                                    재판이 없습니다."
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
+                                    android:minLines="2"/>
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/gray_arrow"
+                                    android:scaleType="center" />
+                            </LinearLayout>
+                            <!--기간-->
+                            <TextView
+                                android:id="@+id/progressTrialTime"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="진행중인 재판이 없습니다."
+                                android:textSize="11dp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                        <!--이전 재판-->
+                        <LinearLayout
+                            android:id="@+id/previous_trial"
+                            android:layout_width="200dp"
+                            android:layout_height="300dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/square_round_background"
+                            android:elevation="5dp"
+                            android:orientation="vertical">
+                            <!--이미지-->
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:background="@drawable/previous_trial_image" />
+                            <!--타이틀과 화살표-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="이전 모의재판
+                                    결과 확인하러 가기"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/gray_arrow"
+                                    android:scaleType="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="15dp"
+                            android:layout_height="15dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/square_white_background"
+                android:orientation="vertical" />
+
+            <!--퀴즈-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_white_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="퀴즈"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="오늘도 퀴즈 풀고 포인트 얻어가세요!"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+                <!--약간 띄우기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/square_white_background"
+                    android:orientation="vertical" />
+                <!--난이도★☆☆-->
+                <LinearLayout
+                    android:id="@+id/level_1"
+                    android:layout_width="380dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/square_sky_round_background"
+                    android:elevation="5dp">
+
+                    <TextView
+                        android:layout_width="340dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:text="난이도★☆☆"
+                        android:textColor="@color/blue"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/sky_arrow" />
+                </LinearLayout>
+                <!--약간 띄우기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/square_white_background"
+                    android:orientation="vertical" />
+                <!--난이도★★☆-->
+                <LinearLayout
+                    android:id="@+id/level_2"
+                    android:layout_width="380dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/square_sky_round_background"
+                    android:elevation="5dp">
+
+                    <TextView
+                        android:layout_width="340dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:text="난이도★★☆"
+                        android:textColor="@color/blue"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/sky_arrow" />
+                </LinearLayout>
+                <!--약간 띄우기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/square_white_background"
+                    android:orientation="vertical" />
+                <!--난이도★★★-->
+                <LinearLayout
+                    android:id="@+id/level_3"
+                    android:layout_width="380dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/square_sky_round_background"
+                    android:elevation="5dp">
+
+                    <TextView
+                        android:layout_width="340dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center_vertical"
+                        android:text="난이도★★★"
+                        android:textColor="@color/blue"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/sky_arrow" />
+                </LinearLayout>
+                <!--약간 띄우기-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/square_white_background"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home"
+        android:enabled="true"
+        android:checked="true"
+        android:title="홈" />
+    <item
+        android:id="@+id/menu_consulting"
+        android:icon="@drawable/consulting"
+        android:enabled="true"
+        android:title="상담" />
+    <item
+        android:id="@+id/menu_experience"
+        android:icon="@drawable/experience"
+        android:enabled="true"
+        android:title="체험" />
+    <item
+        android:id="@+id/menu_news"
+        android:icon="@drawable/news"
+        android:enabled="true"
+        android:title="소식" />
+    <item
+        android:id="@+id/menu_personal"
+        android:icon="@drawable/personal"
+        android:enabled="true"
+        android:title="마이페이지" />
+</menu>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizGameActivity">
+
+    <!--액션바 커스터마이징-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/app_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/black"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/arrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:background="@drawable/background_default"
+            android:src="@drawable/arrow"/>
+
+        <EditText
+            android:id="@+id/tempTrial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="150dp"
+            android:textSize="20dp"
+            android:text="퀴즈"
+            android:background="@drawable/background_default"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <FrameLayout
+        android:id="@+id/quiz_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </FrameLayout>
+
+</LinearLayout>

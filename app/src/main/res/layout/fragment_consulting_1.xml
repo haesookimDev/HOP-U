@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/background_default"
+                android:orientation="vertical" />
+            <!--기능 이름: 푸코 전문가 소개-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="푸코 전문가 소개"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/background_default"
+                android:orientation="vertical" />
+            <!--전문가 리사이클러뷰-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <!--약간 띄우기-->
+                    <LinearLayout
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/background_default"/>
+                    <!--김여화 전문가-->
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/square_white_round_background"
+                        android:elevation="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/counselor1" />
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            android:background="@drawable/background_default"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="김여화 전문가"
+                            android:textColor="@color/navy"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@drawable/background_default"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="한국대학교"
+                            android:textSize="17dp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <!--약간 띄우기-->
+                    <LinearLayout
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/background_default"/>
+                    <!--오세원 전문가-->
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/square_white_round_background"
+                        android:elevation="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/counselor2" />
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            android:background="@drawable/background_default"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="오세원 전문가"
+                            android:textColor="@color/navy"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@drawable/background_default"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="대한대학교"
+                            android:textSize="17dp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <!--약간 띄우기-->
+                    <LinearLayout
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/background_default"/>
+                    <!--이유진 전문가-->
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/square_white_round_background"
+                        android:elevation="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/counselor3" />
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            android:background="@drawable/background_default"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="이유진 전문가"
+                            android:textColor="@color/navy"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+                        <!--약간 띄우기-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@drawable/background_default"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="민국대학교"
+                            android:textSize="17dp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <!--약간 띄우기-->
+                    <LinearLayout
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/background_default"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!--내 주변 상담기관 찾기 버튼-->
+            <LinearLayout
+                android:id="@+id/find_consulting"
+                android:layout_width="380dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@drawable/square_blue_background"
+                android:elevation="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="340dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:text="내 주변 상담기관 찾기"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/white_arrow" />
+            </LinearLayout>
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/background_default"
+                android:orientation="vertical" />
+
+            <!--기능 이름: 전문 상담 게시판-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="전문 상담 게시판"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="end"
+                    android:text="@string/more"
+                    android:textColor="@color/blue"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <!--약간 띄우기-->
+            <!--전문 상담 게시판 리사이클러뷰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="20dp">
+
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/lock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="학교폭력이 맞나요?ㅠㅠ"
+                        android:textColor="@color/black"
+                        android:layout_gravity="start"
+                        android:textSize="14sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="상담대기"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/straight"
+                    android:orientation="vertical" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="20dp">
+
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/lock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="너무 힘들어요"
+                        android:textColor="@color/black"
+                        android:layout_gravity="start"
+                        android:textSize="14sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="상담완료"
+                            android:textColor="@color/blue"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/straight"
+                    android:orientation="vertical" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="20dp">
+
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/lock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="질문드립니다"
+                        android:textColor="@color/black"
+                        android:layout_gravity="start"
+                        android:textSize="14sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="상담완료"
+                            android:textColor="@color/blue"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/straight"
+                    android:orientation="vertical" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="20dp">
+
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/lock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="아이가 힘들어합니다."
+                        android:textColor="@color/black"
+                        android:layout_gravity="start"
+                        android:textSize="14sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="상담완료"
+                            android:textColor="@color/blue"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/straight"
+                    android:orientation="vertical" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="20dp">
+
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/lock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="이유없는 따돌림?"
+                        android:textColor="@color/black"
+                        android:layout_gravity="start"
+                        android:textSize="14sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="상담완료"
+                            android:textColor="@color/blue"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/straight"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="20dp"/>
+
+
+
+
+            </LinearLayout>
+            <!--약간 띄우기-->
+            <!--전문가 상담하기 버튼-->
+            <Button
+                android:id="@+id/consulting_application"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:text="전문가 상담하기"
+                android:textSize="15dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:background="@drawable/square_blue_round_background"/>
+
+            <!--약간 띄우기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/background_default"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
